@@ -9,13 +9,13 @@ public class SeconddProgramSerg {
         double sideC = 10; // длинна стороныы AС
 
         double injection1 = cosAB(sideA, sideB, sideC); // угол треугольника A
-        System.out.println("Угол A = " + injection1);
+        System.out.println("Угол A = " + injection1 + " Град.");
         double injection2 = cosBC(sideA, sideB, sideC); // угол треугольника B
-        System.out.println("Угол В = " + injection2);
+        System.out.println("Угол В = " + injection2 + " Град.");
         double injection3 = cosAC(sideA, sideB, sideC); // угол треугольника B
-        System.out.println("Угол С = " + injection3);
+        System.out.println("Угол С = " + injection3 + " Град.");
         double exam = injection1 + injection2 + injection3;
-        System.out.println("Провверка суммы угловв  = " + exam);
+        System.out.println("Провверка суммы угловв  = " + exam + " Град.");
 
     }
 
