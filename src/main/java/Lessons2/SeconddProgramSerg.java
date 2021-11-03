@@ -1,5 +1,5 @@
 package Lessons2;
-
+// Программа высчитывает углы треугольника по изввестным сторонам
 public class SeconddProgramSerg {
 
     public static void main(String[] args) {
