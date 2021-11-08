@@ -1,4 +1,4 @@
-package Lessons2;
+package lessons2;
 
 // Программа высчитывает углы треугольника по изввестным сторонам
 public class SeconddProgramSerg {

@@ -1,6 +1,4 @@
-package Lessons1;
-
-import java.util.Arrays;
+package lessons1;
 
 public class FirsstProgramSerg {
 
