@@ -4,7 +4,7 @@ public class FactorialProgramElse2 {
     public static void main(String[] args) {
 
 
-        int num = 11; // вести число
+        int num = 0; // вести число
         int rezault =1;
         int factorial = 1;
 
