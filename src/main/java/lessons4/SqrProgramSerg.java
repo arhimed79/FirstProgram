@@ -1,4 +1,4 @@
-package lesssons4;
+package lessons4;
 
 public class SqrProgramSerg {
     public static void main(String[] args) {
