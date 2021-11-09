@@ -3,9 +3,9 @@ package lessons3;
 public class FactorialProgramForSerg {
     public static void main(String[] args) {  // считает факториал
 
-        int num = 11; // введите число
+        int num = 15; // введите число
         long factorialal = getFactorial( num );
-        System.out.println("факториал = " + factorialal);
+        System.out.println("факториал " +num+ " = " + factorialal);
     }
     public static long getFactorial(int arg) {
         long rezault = 1;

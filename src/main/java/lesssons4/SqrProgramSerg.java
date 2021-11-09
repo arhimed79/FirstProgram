@@ -2,7 +2,7 @@ package lesssons4;
 
 public class SqrProgramSerg {
     public static void main(String[] args) {
-        int num = 4097;
+        int num = 36;
         int value = 1;
         int sum = 0;
 
