@@ -2,7 +2,7 @@ package lessons3;
    // Условный оператор ELSE
 public class FactorialProgramElseSerg {
     public static void main(String[] args) {  // считает факториал в диапазоне от 0 до 10
-        int nam = 1; // ввести число
+        int nam = 7; // ввести число
 
         if (nam == 0) {
             int fractal = 1;

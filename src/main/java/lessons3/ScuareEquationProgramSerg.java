@@ -2,8 +2,8 @@ package lessons3;
 
 public class ScuareEquationProgramSerg {
     public static void main(String[] args) {
-        int a = 9; // введите А
-        int b = 6; // введите В
+        int a = 1; // введите А
+        int b = 3; // введите В
         int c = 1; // введите С
 
         if (a != 0) {
