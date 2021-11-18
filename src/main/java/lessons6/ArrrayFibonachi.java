@@ -25,8 +25,7 @@ public class ArrrayFibonachi {
         arg1 = scanerData.nextInt();
         System.out.println("Массив текущий из "+ fibonachi.length +" чисел = " + Arrays.toString(fibonachi)+ "\n");
         if (arg1 <= fibonachi.length) {
-            int arg2 = arg1 - 1;
-            System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachi[arg2] + "\n");
+            System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachi[arg1-1] + "\n");
 
             return getNum(fibonachi,arg1);// или нижняя строка
             //System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
