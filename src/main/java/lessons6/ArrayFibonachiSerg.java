@@ -3,7 +3,7 @@ package lessons6;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrrayFibonachi {
+public class ArrayFibonachiSerg {
     public static void main(String[] args) {
 
         int[] arroyFibonachi = new int[10];
@@ -20,7 +20,7 @@ public class ArrrayFibonachi {
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
-            System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
+            System.exit(ArrayFibonachiSerg.getNum(fibonachi, arg1));
         }
         arg1 = scanerData.nextInt();
         System.out.println("Массив текущий из "+ fibonachi.length +" чисел = " + Arrays.toString(fibonachi)+ "\n");
