@@ -39,7 +39,7 @@ public class ArrrayFibonachi {
             return getNum(fibonachi,arg1);// или нижняя строка
             //System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
         }
-        // return arg1; если используется нижняя строка
+        // return arg1; // если используется нижняя строка
     }
 
     public static int[] getIns(int[] fibonachi1) {
