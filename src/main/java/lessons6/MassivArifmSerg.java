@@ -10,7 +10,8 @@ public class MassivArifmSerg {
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
-            System.exit(0);
+
+            System.exit( 123456789);
         }
         int[] massivNums = getInts(scanerData);
         int min = getMin(massivNums);
