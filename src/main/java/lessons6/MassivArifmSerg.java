@@ -1,5 +1,6 @@
 package lessons6;
 
+import javax.security.sasl.SaslClientFactory;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -10,23 +11,23 @@ public class MassivArifmSerg {
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
-
-            System.exit( 123456789);
+            return;
         }
-        int[] massivNums = getInts(scanerData);
+        int inData = scanerData.nextInt();
+        int[] massivNums = getInts(inData);
         int min = getMin(massivNums);
         int max = getMax(massivNums);
-        double averageMassiv = getSumMassiv(massivNums);
+        double averageMassiv = getAverageMassiv(massivNums);
 
         System.out.println("массив = " + Arrays.toString(massivNums) + "\n");
         System.out.println("минимальное число в массиве = " + min + "\n" + "максимальное число в массиве = " + max);
         System.out.println("Среднееverage арифмитическое значение массива = " + averageMassiv);
     }
 
-    public static double getSumMassiv(int[] massivNums) {
+    public static double getAverageMassiv(int[] massivNums) {
         int sum = getSum(massivNums);
-        double averageMassiv = (double) sum / massivNums.length;
-        return averageMassiv;
+        return  (double) sum / massivNums.length;
+
     }
 
     public static int getMax(int[] massivNums) {
@@ -47,9 +48,8 @@ public class MassivArifmSerg {
         return sum;
     }
 
-    public static int[] getInts(Scanner scanerData) {
-        int intData = scanerData.nextInt();
-        int[] massivRandom = new int[intData];
+    public static int[] getInts(int data) {
+        int[] massivRandom = new int[data];
         for (int i = 0; i < massivRandom.length; i++) {
             massivRandom[i] = (int) (Math.random() * 100);
         }

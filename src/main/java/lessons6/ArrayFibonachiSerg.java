@@ -11,37 +11,40 @@ public class ArrayFibonachiSerg {
         int[] fibonachi = getIns(arroyFibonachi);
         System.out.println("Массив изначально " + Arrays.toString(fibonachi));
 
-        int num1 = 0;
-        int num = getNum(fibonachi, num1);
+        int num = getNum(fibonachi);
     }
 
-    public static int getNum(int[] fibonachi, int arg1) {
+    public static int getNum(int[] fibonachi) {
         System.out.println("ВВедите число в последовательности Фибоначи");
         Scanner scanerData = new Scanner(System.in);
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
-            System.exit(ArrayFibonachiSerg.getNum(fibonachi, arg1));
+            System.exit(ArrayFibonachiSerg.getNum(fibonachi));
         }
-        arg1 = scanerData.nextInt();
-        System.out.println("Массив текущий из "+ fibonachi.length +" чисел = " + Arrays.toString(fibonachi)+ "\n");
-        if (arg1 <= fibonachi.length) {
-            System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachi[arg1-1] + "\n");
+        int arg1 = scanerData.nextInt();
+        if (arg1>1) {
+            System.out.println("Массив текущий из " + fibonachi.length + " чисел = " + Arrays.toString(fibonachi) + "\n");
+            if (arg1 <= fibonachi.length) {
+                System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachi[arg1 - 1] + "\n");
 
-            return getNum(fibonachi,arg1);// или нижняя строка
-            //System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
-        } else {
-            int[] fibonachiPlus = new int[arg1];
-            fibonachiPlus = getIns(fibonachiPlus);
-            System.out.println("Массив обновленный из " +fibonachiPlus.length +" чисел = "+ Arrays.toString(fibonachiPlus));
-            System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachiPlus[arg1-1] + "\n");
-            fibonachi = fibonachiPlus;
+                return getNum(fibonachi);// или нижняя строка
+                //System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
+            } else {
+                int[] fibonachiPlus = new int[arg1];
+                fibonachiPlus = getIns(fibonachiPlus);
+                System.out.println("Массив обновленный из " + fibonachiPlus.length + " чисел = " + Arrays.toString(fibonachiPlus));
+                System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachiPlus[arg1 - 1] + "\n");
+                fibonachi = fibonachiPlus;
 
-            return getNum(fibonachi,arg1);// или нижняя строка
-            //System.exit(ArrrayFibonachi.getNum(fibonachi, arg1));
+                return getNum(fibonachi);
+            }
+        }else {
+            System.out.println("необходимо ввести число от одного и выше, а вы ввели" + arg1 + "/");
+            return getNum(fibonachi);
         }
-        // return arg1; // если используется нижняя строка
     }
+
 
     public static int[] getIns(int[] fibonachi1) {
         fibonachi1[0] = 0;
