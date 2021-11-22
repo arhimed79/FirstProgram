@@ -6,41 +6,35 @@ public class MainMetod {
 
 
         CatClass murzik = new CatClass("Murzik", 3, 5, 200, false);
-
-        int run = murzik.run(150); // Ввод значения run
-
-        if ((run != 0)) {
-            System.out.println("Мурзик пробежал " + run + " м");
-        } else {
-            System.out.println("Мурзик не может");
-        }
-
         DogClass sharik = new DogClass("Sharik", 3, 3, 500, true);
-
-        boolean dogSwim = false;// Ввод значения swim
-        System.out.println("\n" + "Могут ли собаки плавать? Вы говорите что " + dogSwim);
-        boolean s = sharik.swim();
-
-        if (dogSwim & sharik.swim()) {
-            System.out.println("правда, собаки плавают");
-        } else {
-            System.out.println("не правда, собаки могут плавать");
-        }
-
         TigerClass sherhun = new TigerClass("Sherhun", 8, 8, 300, false);
 
-        int jamp = sherhun.jamp(9); //Ввод значения jump
+        int run = murzik.run(200); // Ввод значения run
+        boolean dogSwim = false;// Ввод значения swim
+        int jamp = sherhun.jamp(8); //Ввод значения jump
+
+        if ((run != 0)) {
+            System.out.println("\n"+"Мурзик пробежал " + run + " м");
+        } else {
+            System.out.println("\n"+"Мурзик не может");
+        }
+
+        System.out.println("\n" + "Могут ли собаки плавать? Вы говорите что " + dogSwim);
+
+        if (dogSwim && sharik.swim()) {
+            System.out.println("Ответ: правда, собаки плавают");
+        } else {
+            System.out.println("Ответ: не правда, собаки могут плавать");
+        }
+
         if (jamp != 0) {
             System.out.println("\n" + "Шерхан прыгнул " + jamp + " м");
         } else {
             System.out.println("\n" + "Шерхан так далеко не прыгнет ");
         }
 
-
         int[] agearg = new int[]{murzik.getAgeer(), sharik.getAgeer(), sherhun.getAgeer()};
-
         int max = getMaxIndex(agearg);
-
         switch (max) {
             case(0):System.out.println("\n"+"Самый взрослый Мурзик, ему= " + murzik.getAgeer()+" лет");
             break;

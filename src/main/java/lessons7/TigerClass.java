@@ -52,7 +52,7 @@ public class TigerClass {
     }
 
     public int jamp(int j) {
-        if (j < this.jumper){
+        if (j <= this.jumper){
             return j;
         }
         return 0;

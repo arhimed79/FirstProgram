@@ -56,7 +56,7 @@ public class CatClass {
     }
 
     public int run(int k) {
-        if (k < this.runer) {
+        if (k <= this.runer) {
             return k; }
         else{
             return 0;}
