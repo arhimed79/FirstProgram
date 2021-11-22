@@ -23,7 +23,7 @@ public class ArrayFibonachiSerg {
             System.exit(ArrayFibonachiSerg.getNum(fibonachi));
         }
         int arg1 = scanerData.nextInt();
-        if (arg1>1) {
+        if (arg1 > 1) {
             System.out.println("Массив текущий из " + fibonachi.length + " чисел = " + Arrays.toString(fibonachi) + "\n");
             if (arg1 <= fibonachi.length) {
                 System.out.println(arg1 + "-е е число в последовательности Фибоначи = " + fibonachi[arg1 - 1] + "\n");
@@ -39,8 +39,8 @@ public class ArrayFibonachiSerg {
 
                 return getNum(fibonachi);
             }
-        }else {
-            System.out.println("необходимо ввести число от одного и выше, а вы ввели" + arg1 + "/");
+        } else {
+            System.out.println("необходимо ввести число от одного и выше, а вы ввели / " + arg1 + " /");
             return getNum(fibonachi);
         }
     }
