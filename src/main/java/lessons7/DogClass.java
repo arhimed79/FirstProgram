@@ -54,12 +54,14 @@ public class DogClass {
         this.runer = runer;
         this.swimer = swimer;
     }
-    public static boolean swim1(boolean swim) {
+
+    public void swim1(boolean swim) {
         System.out.println("\n" + "Могут ли собаки плавать? Вы говорите что " + swim);
         if (swim && swimer) {
             System.out.println("Ответ: правда, собаки плавают");
         } else {
             System.out.println("Ответ: не правда, собаки могут плавать");
         }
-        return swimer;}
+
+    }
 }

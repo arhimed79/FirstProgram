@@ -51,13 +51,12 @@ public class TigerClass {
         return swimer;
     }
 
-    public int jamp(int j) {
+    public void jamp(int j) {
         if (j <= this.jumper){
             System.out.println("\n" + "Шерхан прыгнул " + j + " м");
         }else{
             System.out.println("\n" + "Шерхан так далеко не прыгнет ");
         }
-        return j;
     }
 
 }

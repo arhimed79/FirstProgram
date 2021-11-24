@@ -9,7 +9,7 @@ public class MainMetod {
         DogClass sharik = new DogClass("Sharik", 3, 3, 500, true);
         TigerClass sherhun = new TigerClass("Sherhun", 8, 8, 300, false);
 
-        murzik.run(210); // Ввод значения run
+        murzik.run(190); // Ввод значения run
         sharik.swim1 (false);// Ввод значения swim
         sherhun.jamp(6); //Ввод значения jump
 
