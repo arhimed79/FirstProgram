@@ -16,11 +16,11 @@ public class MainMetod {
         int[] agearg = new int[]{murzik.getAgeer(), sharik.getAgeer(), sherhun.getAgeer()};
         int max = getMaxIndex(agearg);
         switch (max) {
-            case(0):System.out.println("\n"+"Самый взрослый Мурзик, ему= " + murzik.getAgeer()+" лет");
+            case(0):System.out.println("\n"+"Самый взрослый из животных Мурзик, ему= " + murzik.getAgeer()+" лет");
             break;
-            case(1):System.out.println("\n"+"Самый взрослый Шарик, ему= " + sharik.getAgeer()+" лет");
+            case(1):System.out.println("\n"+"Самый взрослый из животных Шарик, ему= " + sharik.getAgeer()+" лет");
             break;
-            case(2):System.out.println("\n"+"Самый взрослый Шерхан, ему= " + sherhun.getAgeer()+" лет");
+            case(2):System.out.println("\n"+"Самый взрослый из животных Шерхан, ему= " + sherhun.getAgeer()+" лет");
                 break;
             default:
         }
