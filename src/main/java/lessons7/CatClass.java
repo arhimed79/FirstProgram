@@ -55,10 +55,11 @@ public class CatClass {
         this.swimer = swimer;
     }
 
-    public int run(int k) {
+    public void run(int k) {
         if (k <= this.runer) {
-            return k; }
-        else{
-            return 0;}
+            System.out.println("\n" + "Мурзик пробежал " + k + " м");
+        } else {
+            System.out.println("\n" + "Мурзик не может");
+        }
     }
 }

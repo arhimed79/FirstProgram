@@ -9,29 +9,9 @@ public class MainMetod {
         DogClass sharik = new DogClass("Sharik", 3, 3, 500, true);
         TigerClass sherhun = new TigerClass("Sherhun", 8, 8, 300, false);
 
-        int run = murzik.run(200); // Ввод значения run
-        boolean dogSwim = false;// Ввод значения swim
-        int jamp = sherhun.jamp(8); //Ввод значения jump
-
-        if ((run != 0)) {
-            System.out.println("\n"+"Мурзик пробежал " + run + " м");
-        } else {
-            System.out.println("\n"+"Мурзик не может");
-        }
-
-        System.out.println("\n" + "Могут ли собаки плавать? Вы говорите что " + dogSwim);
-
-        if (dogSwim && sharik.swim()) {
-            System.out.println("Ответ: правда, собаки плавают");
-        } else {
-            System.out.println("Ответ: не правда, собаки могут плавать");
-        }
-
-        if (jamp != 0) {
-            System.out.println("\n" + "Шерхан прыгнул " + jamp + " м");
-        } else {
-            System.out.println("\n" + "Шерхан так далеко не прыгнет ");
-        }
+        murzik.run(210); // Ввод значения run
+        sharik.swim1 (false);// Ввод значения swim
+        sherhun.jamp(6); //Ввод значения jump
 
         int[] agearg = new int[]{murzik.getAgeer(), sharik.getAgeer(), sherhun.getAgeer()};
         int max = getMaxIndex(agearg);

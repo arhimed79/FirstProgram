@@ -53,9 +53,11 @@ public class TigerClass {
 
     public int jamp(int j) {
         if (j <= this.jumper){
-            return j;
+            System.out.println("\n" + "Шерхан прыгнул " + j + " м");
+        }else{
+            System.out.println("\n" + "Шерхан так далеко не прыгнет ");
         }
-        return 0;
+        return j;
     }
 
 }
