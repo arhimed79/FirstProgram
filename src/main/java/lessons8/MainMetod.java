@@ -1,4 +1,4 @@
-package lesssons8;
+package lessons8;
 
 public class MainMetod {
     public static void main(String[] args) {

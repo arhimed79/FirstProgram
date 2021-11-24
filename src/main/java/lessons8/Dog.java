@@ -1,6 +1,4 @@
-package lesssons8;
-
-import java.util.function.DoublePredicate;
+package lessons8;
 
 public class Dog extends Animals {
     public Dog(String name, String sound) {
