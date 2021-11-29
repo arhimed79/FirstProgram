@@ -1,7 +1,5 @@
 package lessons9;
 
-import static java.nio.file.Files.move;
-
 public class MainMetodAuto {
     public static void main(String[] args) {
 
@@ -20,13 +18,24 @@ public class MainMetodAuto {
         AutoMobile[] cars = new Car[]{Lada, Uaz, Opel, Volvo, Mersedes};
         AutoMobile[] trucks = new Truck[]{Kamaz, Scania, Man, America, Europa};
 
+        distanceCars(cars);
+
+        System.out.println("_____________________________________________");
+
+        distanceTruks(trucks);
+    }
+    private static void distanceCars(AutoMobile[] cars) {
         for (AutoMobile car : cars) {
             car.move();
         }
-        System.out.println("_____________________________________________");
+    }
+
+    private static void distanceTruks(AutoMobile[] trucks) {
         for (AutoMobile truck : trucks) {
             truck.move();
         }
     }
+
+
 }
 
