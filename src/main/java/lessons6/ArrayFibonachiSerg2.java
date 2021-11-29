@@ -28,6 +28,10 @@ public class ArrayFibonachiSerg2 {
         Scanner scanerData = new Scanner(System.in);
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
+            if ("exit".equalsIgnoreCase(text)){
+                System.out.println("Спасибо, пока");
+                System.exit(0);
+            }
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
             //System.exit(0);// или
             System.exit(ArrayFibonachiSerg2.getNum(fibonachi));

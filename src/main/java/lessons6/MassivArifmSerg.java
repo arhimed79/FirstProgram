@@ -6,10 +6,15 @@ import java.util.Scanner;
 
 public class MassivArifmSerg {
     public static void main(String[] args) {
+
         System.out.println("ВВедите число (длинну массива)");
         Scanner scanerData = new Scanner(System.in);
         while (!scanerData.hasNextInt()) {
             String text = scanerData.next();
+            if ("exit".equalsIgnoreCase(text)){
+                System.out.println("Спасибо, пока");
+                System.exit(0);
+            }
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
             return;
         }
