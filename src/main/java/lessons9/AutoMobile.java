@@ -19,9 +19,9 @@ public abstract class AutoMobile {
     public void move() {
         int i = dRandom();
         if (i <= distance) {
-            System.out.print("   Машина проедет  "+ i + "  из "+distance+ " \n"+" \n");
+            System.out.print("   Машина проедет  "+ i + "  из "+distance+ " \n");
         }else {
-            System.out.print("   Машина не проедет  "+ i + "  из "+distance+ " \n"+" \n");
+            System.out.print("   Машина не проедет  "+ i + "  из "+distance+ " \n");
         }
     }
 

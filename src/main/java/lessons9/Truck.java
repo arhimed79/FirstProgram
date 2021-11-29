@@ -9,7 +9,7 @@ public final class Truck extends AutoMobile {
     }
 
     public void move() {
-        System.out.println("Возможность проезда грузоввого автомобиля  "+name+ " на одном баке");
+        System.out.println(" \n Возможность проезда грузоввого автомобиля  "+name+ " на одном баке");
         super.move();
     }
 }

@@ -7,7 +7,7 @@ public final class Car extends AutoMobile {
     public Car(String name, int distance) {super(name, distance);}
 
     public void move() {
-        System.out.println("Возможность проезда легкового автомобиля  " +name+ " на одном баке");
+        System.out.println(" \n Возможность проезда легкового автомобиля  " +name+ " на одном баке");
         super.move();
     }
 
