@@ -3,7 +3,7 @@ package lessons9;
 public abstract class AutoMobile {
 
     public String name;
-    public int distance;
+    private int distance;
 
     public AutoMobile(String name, int distance) {
         this.name = name;
