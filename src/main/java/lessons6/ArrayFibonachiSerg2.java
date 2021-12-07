@@ -20,7 +20,7 @@ public class ArrayFibonachiSerg2 {
         System.out.println("Массив изначально " + Arrays.toString(fibonachi));
 
 
-        int num = getNum(fibonachi);
+        getNum(fibonachi);
     }
 
     public static int getNum(int[] fibonachi) {

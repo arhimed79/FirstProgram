@@ -1,7 +1,7 @@
 package lessons10.value1;
 
 public class Celvin extends Temperature {
-    public Celvin(int i, int j, double tempIndex) {
+    public Celvin() {
     }
 
 

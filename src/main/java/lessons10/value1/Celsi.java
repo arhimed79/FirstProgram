@@ -2,7 +2,7 @@ package lessons10.value1;
 
 public class Celsi extends Temperature {
 
-    public Celsi(int i, int j, double tempIndex) {
+    public Celsi() {
     }
 
     public static void CelsiToFaringeit(double tempIndex) {

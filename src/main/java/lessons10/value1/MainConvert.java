@@ -30,8 +30,8 @@ public class MainConvert {
             System.out.println("Введите действительные числа, а вы ввели /" + text + "/");
             return getTempEnter();
         }
-        double tempEnter = scanerData.nextDouble();
-        return tempEnter;
+        return  scanerData.nextDouble();
+
     }
 
     private static int getNum() {
