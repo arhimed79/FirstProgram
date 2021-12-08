@@ -1,6 +1,6 @@
 package lessons11;
 
-public class MyExeption extends Exception {
+public class MyExeption extends RuntimeException {
 
     String name;
 

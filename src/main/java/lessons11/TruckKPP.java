@@ -9,7 +9,11 @@ public final class TruckKPP extends AutoMobileKPP {
     @Override
     public void travelKPP() {
         System.out.println("Проверка грузового транспорта");
-        examination();
+        try {
+            examination1();
+        }catch (MyExeption myExeption) {
+            System.out.println();
+        }
     }
 }
 

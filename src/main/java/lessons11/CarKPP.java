@@ -10,7 +10,11 @@ public final class CarKPP extends AutoMobileKPP {
     @Override
     public void travelKPP() {
         System.out.println("Проверка легкового транспорта");
-        examination();
+        try {
+        examination1();
+        }catch (MyExeption myExeption) {
+            System.out.println();
+        }
     }
 }
 

@@ -41,14 +41,12 @@ public class MainMetodAutoKPP {
 
     private static int RandomSpeed() {
         Random random = new Random();
-        int i = random.nextInt(160);
-        return i;
+        return random.nextInt(160);
     }
 
     private static int RandomWedth() {
         Random random = new Random();
-       int i = random.nextInt(12);
-        return i;
+        return random.nextInt(12);
     }
 
     private static double RandomWidth() {

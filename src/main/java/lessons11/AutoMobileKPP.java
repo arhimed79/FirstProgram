@@ -19,8 +19,8 @@ public abstract class AutoMobileKPP {
 
     public abstract void travelKPP();
 
-    public void examination() {
-        try {
+    public void examination1() {
+
             if (speed > RestrictionsEnum.MAXSPEED.getNum()) {
                 throw new MyExeption("Очень высокая скорость " + speed + " км/ч. доступ запрещен. г.н. " + nambe +
                         " отправлен в полицию");
@@ -36,8 +36,6 @@ public abstract class AutoMobileKPP {
                 System.out.println("Машина " + nambe + " проехала на КПП. Скорость " + speed + " км/ч. Вес " + weight + " т. Ширина "
                         + width + " м. Высота " + high + " м.\n");
             }
-        } catch (MyExeption myExeption) {
-            System.out.println();
         }
     }
-}
+
