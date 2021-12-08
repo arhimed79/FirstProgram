@@ -11,8 +11,8 @@ public final class TruckKPP extends AutoMobileKPP {
         System.out.println("Проверка грузового транспорта");
         try {
             examination1();
-        }catch (MyExeption myExeption) {
-            System.out.println();
+        } catch (MyExeption myExeption) {
+            System.out.println("Этот грузовой автомобиль не проехал \n");
         }
     }
 }

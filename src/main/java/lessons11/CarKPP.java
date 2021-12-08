@@ -11,9 +11,9 @@ public final class CarKPP extends AutoMobileKPP {
     public void travelKPP() {
         System.out.println("Проверка легкового транспорта");
         try {
-        examination1();
-        }catch (MyExeption myExeption) {
-            System.out.println();
+            examination1();
+        } catch (MyExeption myExeption) {
+            System.out.println("Этот легковой автомобиль не проехал \n");
         }
     }
 }

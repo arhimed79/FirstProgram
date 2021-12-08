@@ -7,20 +7,20 @@ public class MainMetodAutoKPP {
     public static void main(String[] args) {
 
 
-        AutoMobileKPP Lada = new CarKPP("a111aa", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Uaz = new CarKPP("в222вв", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Opel = new CarKPP("с333сс", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Volvo = new CarKPP("e444ee", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Mersedes = new CarKPP("k555kk", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        CarKPP Lada = new CarKPP("a111aa", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        CarKPP Uaz = new CarKPP("в222вв", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        CarKPP Opel = new CarKPP("с333сс", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        CarKPP Volvo = new CarKPP("e444ee", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        CarKPP Mersedes = new CarKPP("k555kk", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
 
-        AutoMobileKPP Kamaz = new TruckKPP("m666mm", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Scania = new TruckKPP("н777нн", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Man = new TruckKPP("р888рр", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP America = new TruckKPP("т999тт", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
-        AutoMobileKPP Europa = new TruckKPP("у101уу", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        TruckKPP Kamaz = new TruckKPP("m666mm", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        TruckKPP Scania = new TruckKPP("н777нн", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        TruckKPP Man = new TruckKPP("р888рр", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        TruckKPP America = new TruckKPP("т999тт", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
+        TruckKPP Europa = new TruckKPP("у101уу", RandomSpeed(), RandomWedth(), RandomWidth(), RandomHign());
 
-        AutoMobileKPP[] cars = new CarKPP[]{(CarKPP) Lada, (CarKPP) Uaz, (CarKPP) Opel, (CarKPP) Volvo, (CarKPP) Mersedes};
-        AutoMobileKPP[] trucks = new TruckKPP[]{(TruckKPP) Kamaz, (TruckKPP) Scania, (TruckKPP) Man, (TruckKPP) America, (TruckKPP) Europa};
+        AutoMobileKPP[] cars = new CarKPP[]{Lada, Uaz, Opel, Volvo, Mersedes};
+        AutoMobileKPP[] trucks = new TruckKPP[]{Kamaz, Scania, Man, America, Europa};
 
         travelCarKPP(cars);
 
