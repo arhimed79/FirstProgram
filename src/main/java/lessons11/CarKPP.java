@@ -7,7 +7,6 @@ public final class CarKPP extends AutoMobileKPP {
         super(nambe, speed, weight, width, high);
     }
 
-
     @Override
     public void travelKPP() {
         System.out.println("Проверка легкового транспорта");
