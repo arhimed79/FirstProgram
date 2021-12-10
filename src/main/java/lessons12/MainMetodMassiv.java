@@ -14,10 +14,11 @@ public class MainMetodMassiv {
         String[][] massiv = new String[m][n];
         String[][] array = getFill(massiv);
         print(array);
-        massivRazchetContinied();
+        massivContinied();
         AnalizeMassiv analizeMassiv = new AnalizeMassiv();
         try {
-           System.out.println("Сумма всех чисел в массивве равна " + analizeMassiv.CheckLegth(array)) ;
+            System.out.println("Размерность массива каторую вы ввели  " +array.length+" на "+array[0].length);
+            System.out.println("Сумма всех чисел в массивве равна " + analizeMassiv.CheckLegth(array));
         } catch (MyArraySizeException | MyArrayDataException e) {
             e.printStackTrace();
         }
@@ -29,7 +30,7 @@ public class MainMetodMassiv {
         int num;
         try {
             num = scanerData.nextInt();
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             System.out.println("Вы ввели не целое число, по умолчанию будет присвоено = 4");
             num = 4;
         }
@@ -60,11 +61,11 @@ public class MainMetodMassiv {
         System.out.println();
     }
 
-    private static void massivRazchetContinied() {
-        System.out.println("Давайте проанализируем какую размерность Вы ввели и проссумируем текущий массив," +
-                " если это возможно \n Нажмите любую клавишу для начала рассчета");
+    private static void massivContinied() {
+        System.out.println("Давайте проанализируем какую размерность Вы ввели и проссумируем массив," +
+                " если это возможно \n Введите любой символ для начала рассчета");
         Scanner scaner = new Scanner(System.in);
-        while (true){
+        while (true) {
             if (scaner.hasNext()) break;
         }
     }
