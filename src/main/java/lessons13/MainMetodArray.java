@@ -50,7 +50,7 @@ public class MainMetodArray {
     private static void IndexCheck(ArrayList<Employee> employees) {
         for (int i = (employees.size() - 1); i > 0; i--) {
             Employee value = employees.get(i);
-            if (i % 2 != 0) {
+            if (value.getID() % 2 != 0) {
                 System.out.println("Сотрудник " + value.getFIO() + " уволен, его ID= " +value.getID());
                 employees.remove(i);
             }

@@ -16,8 +16,6 @@ public class Employee {
         return FIO;
     }
 
-
-
     public Integer getWorkAge() {
 
         return workAge;
@@ -25,19 +23,17 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "ID=" + ID +
-                ", FIO='" + FIO + '\'' +
-                ", workAge=" + workAge +
-                '}';
+        return "\n Сотрудник" +
+                "ID= " + ID +
+                "  ФИО \\" + FIO +
+                "\\ стаж работы = " + workAge+
+                " года";
     }
 
     public Employee(Integer ID, String FIO, Integer workAge) {
         this.ID = ID;
         this.FIO = FIO;
         this.workAge = workAge;
-
-
     }
 }
 
