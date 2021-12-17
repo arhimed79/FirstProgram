@@ -39,7 +39,7 @@ public class MainMetodArray {
 
         examenationWorkAge(employees, numWorkAge);
         System.out.println();
-        System.out.println("В связи с уменьшение издержек будут уволены сотрудники с нечетным индексом, " +
+        System.out.println("В связи с уменьшение издержек будут уволены сотрудники с нечетным ID, " +
                 "начиная с конца\n");
         Continied();
         IndexCheck(employees);
