@@ -23,11 +23,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "\n Сотрудник" +
+        return "\n Сотрудник {" +
                 "ID= " + ID +
                 "  ФИО \\" + FIO +
                 "\\ стаж работы = " + workAge+
-                " года";
+                " года}";
     }
 
     public Employee(Integer ID, String FIO, Integer workAge) {
