@@ -1,6 +1,7 @@
 package lessons13;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,7 +25,7 @@ public class MainMetodArray {
         employees.add(new Employee(12, "Бунин И. А.", RandomWorkAge()));
         employees.add(new Employee(13, "Тургенев И. С.", RandomWorkAge()));
         employees.add(new Employee(14, "Куприн А. И.", RandomWorkAge()));
-        employees.add(new Employee(15, "Тургенев И. С.", RandomWorkAge()));
+        employees.add(new Employee(15, "Чайковский  П. И.", RandomWorkAge()));
         employees.add(new Employee(16, "Некрасов Н. А.", RandomWorkAge()));
         employees.add(new Employee(17, "Грибоедов А. С.", RandomWorkAge()));
         employees.add(new Employee(18, "Бродский И. А.", RandomWorkAge()));
@@ -35,6 +36,7 @@ public class MainMetodArray {
 
         int numWorkAge = getWorkAge();
         System.out.println("Список сотрудников с указанным стажем работы \n");
+
         examenationWorkAge(employees, numWorkAge);
         System.out.println();
         System.out.println("В связи с уменьшение издержек будут уволены сотрудники с нечетным индексом \n");
@@ -47,8 +49,9 @@ public class MainMetodArray {
 
     private static void IndexCheck(ArrayList<Employee> employees) {
         for (int i = (employees.size() - 1); i > 0; i--) {
+            Employee value = employees.get(i);
             if (i % 2 != 0) {
-                System.out.println("Сотрудник " + employees.get(i) + " уволен");
+                System.out.println("Сотрудник " + value.getFIO() + " уволен, его ID= " +value.getID());
                 employees.remove(i);
             }
         }
@@ -64,7 +67,8 @@ public class MainMetodArray {
     }
 
     private static void examenationWorkAge(ArrayList<Employee> employees, int numWorkAge) {
-        for (Employee value : employees) {
+        for (Iterator<Employee>iterator = employees.iterator();iterator.hasNext(); ){
+             Employee value = iterator.next();
             if (numWorkAge == value.getWorkAge()) {
                 System.out.println("Сотрудник " + value.getFIO() + " имееют стаж " + numWorkAge + " года");
             }

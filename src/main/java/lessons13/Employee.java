@@ -11,18 +11,12 @@ public class Employee {
         return ID;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
 
     public  String getFIO() {
         return FIO;
     }
 
-    public void setFIO(String FIO) {
 
-        this.FIO = FIO;
-    }
 
     public Integer getWorkAge() {
 
