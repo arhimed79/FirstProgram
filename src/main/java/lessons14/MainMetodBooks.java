@@ -5,17 +5,19 @@ import java.util.*;
 
 public class MainMetodBooks {
     public static void main(String[] args) {
+
+        int listOfContacts = 1000; // количество ключей
+        int valueOfNambersPhone = 10000; // вариации номеров
+
         HashMap<Code, ValueContacts> myDirectory = new LinkedHashMap<>();
 
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 1; i < listOfContacts; i++) {
             Long nambe = 8917000000L + i;
             myDirectory.put(new Code(nambe, getMetodSurName(), getMetodName(), getMetodPatronomic()),
-                    new ValueContacts(getMetodMyPhone(), getMetodMyPhone(), getMetodMyPhone()));
+                    new ValueContacts(getMetodMyPhone(valueOfNambersPhone), getMetodMyPhone(valueOfNambersPhone),
+                            getMetodMyPhone(valueOfNambersPhone)));
         }
         System.out.println(myDirectory.entrySet());
-        //System.out.println(myDirectory.size());
-        //System.out.println("__________________________________________________________");
-
 
         ArrayList<Long> countNambe = new ArrayList<>();
         for (int i = 0; i < myDirectory.size(); i++) {
@@ -25,8 +27,8 @@ public class MainMetodBooks {
 
         for (int k = countNambe.size() - 1; k >= 0; k--) {
             if (countNambe.get(k) != null) {
-                System.out.println("Номер абонента = "+countNambe.get(k)+ " чаще всего встречается в списках других " +
-                        "абонентов и равен " +k+ " раз");
+                System.out.println("Номер абонента = "+countNambe.get(k)+ " один из наиболее встречающихся номеров" +
+                        " в списках других абонентов и встречается = " +k+ " раз");
                 //System.out.println(myDirectory.entrySet());
                 break;
             }
@@ -43,15 +45,14 @@ public class MainMetodBooks {
                 }
             }
             countNambe.set(count, val.nambePhone);
-            System.out.println("Номер " + val.nambePhone + " встречается " + count);
+            System.out.println("Номер " + val.nambePhone + " встречается " + count+ " раз");
 
         }
     }
 
-    private static long getMetodMyPhone() {
+    private static long getMetodMyPhone(int value) {
         Random random = new Random();
-
-        int i = random.nextInt(1200);
+        int i = random.nextInt(value);
         return 8917000000L + i;
     }
 
