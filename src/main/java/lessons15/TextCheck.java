@@ -30,8 +30,5 @@ public class TextCheck {
         System.out.println("_________________________");
         System.out.println(myList);
 
-        // }
-        // System.out.println(myList);
-
     }
 }
