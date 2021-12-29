@@ -24,7 +24,7 @@ public class TextCheck {
                 .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (e1, e2) -> e1, LinkedHashMap::new))
-                       .toString());
+                .toString());
 
 
         System.out.println("_________________________");
