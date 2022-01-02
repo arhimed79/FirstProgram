@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 public class ExecutorRunner {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        int ARRAYSIZE = 1000; // количество значений в коллекции
+        int ARRAYSIZE = 100000; // количество значений в коллекции
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
@@ -47,7 +47,7 @@ public class ExecutorRunner {
 
     private static int getValue() {
         Random random = new Random();
-        return random.nextInt(1000);
+        return random.nextInt(10000);
 
     }
 }
