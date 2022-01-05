@@ -19,14 +19,10 @@ public class ExecutorRunner {
         for (int i = 0; i < ARRAYSIZE; i++) {
             myList.add(getValue());
         }
-        System.out.println(myList.toString());
+        System.out.println(myList);
 
-        Future<Integer> min = executorService.submit(() -> {
-            return Collections.min(myList);
-        });
-        Future<Integer> max = executorService.submit(() -> {
-            return Collections.max(myList);
-        });
+        Future<Integer> min = executorService.submit(() -> Collections.min(myList));
+        Future<Integer> max = executorService.submit(() -> Collections.max(myList));
         Future<Double> average = executorService.submit(() -> {
             int sum = 0;
             for (int i : myList) {
