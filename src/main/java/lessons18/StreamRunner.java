@@ -15,7 +15,8 @@ public class StreamRunner {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
         executorService.submit(() -> {
-            try (FileReader fileReader = new FileReader("C:\\Users\\Сергей\\IdeaProjects\\FirstProgram\\src\\main\\resources\\lesss18Input.txt")) {
+            try (FileReader fileReader = new FileReader("C:\\Users\\Сергей\\IdeaProjects\\FirstProgram\\src\\" +
+                    "main\\resources\\lesss18Input.txt")) {
                 try (BufferedReader reader = new BufferedReader(fileReader)) {
                     String lineVerse = reader.readLine();
                     int i = 1;
