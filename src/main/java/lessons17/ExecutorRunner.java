@@ -11,12 +11,12 @@ import java.util.concurrent.Future;
 public class ExecutorRunner {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        int ARRAYSIZE = 100000; // количество значений в коллекции
+        int ARRAYSIZE = 1000000; // количество значений в коллекции
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         ArrayList<Integer> myList = new ArrayList<>();
-        for (int i = 0; i <= ARRAYSIZE; i++) {
+        for (int i = 0; i < ARRAYSIZE; i++) {
             myList.add(getValue());
         }
         System.out.println(myList.toString());
@@ -36,7 +36,7 @@ public class ExecutorRunner {
         });
 
         while (!min.isDone() && !max.isDone() && !average.isDone()) {
-            Thread.sleep(100);
+            Thread.sleep(10);
             System.out.println("Работа потоков не закончена, Ждем");
         }
 
