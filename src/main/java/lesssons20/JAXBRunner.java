@@ -2,6 +2,8 @@ package lesssons20;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Marshaller;
+import lombok.SneakyThrows;
+
 import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -17,15 +19,16 @@ public class JAXBRunner {
                 Position("поэт", new BigDecimal(1000)));
         Employee esenin = new Employee(new Department(4, "Есенин С. А.", "Писатель", "Москва"), new
                 Position("поэт", new BigDecimal(950)));
-        Employee brodsski = new Employee(new Department(4, "Бродский И. А.>", "Поэт-Песенник", "Нью-Йорк"), new
+        Employee brodski = new Employee(new Department(5, "Бродский И. А.>", "Поэт-Песенник", "Нью-Йорк"), new
                 Position("поэт", new BigDecimal(1150)));
 
         EmloyeeArray emloyeeArray = new EmloyeeArray();
-        emloyeeArray.setEmployeeList(Arrays.asList(ivanov, pushkin, lermontov, esenin, brodsski));
+        emloyeeArray.setEmployeeList(Arrays.asList(ivanov, pushkin, lermontov, esenin, brodski));
 
 
         JAXBContext context = JAXBContext.newInstance(EmloyeeArray.class);
         Marshaller marshaller = context.createMarshaller();
+
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
         StringWriter stringWriter = new StringWriter();
