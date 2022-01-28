@@ -48,6 +48,8 @@ class URIRunner {
             System.out.println("-----------------");
 
         }
+        bufferedInputStream.close();
+        fileOutputStream.close();
 
 
         try {
@@ -62,7 +64,7 @@ class URIRunner {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    System.out.println("Текущая температура в выбранном городе = " + element.getAttribute("value"));
+                    System.out.println("Текущая температура в городе = "+city+ " = " + element.getAttribute("value"));
                 }
             }
         } catch (ParserConfigurationException | XPathExpressionException | SAXException | IOException e) {
