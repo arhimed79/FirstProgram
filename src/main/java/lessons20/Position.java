@@ -1,4 +1,4 @@
-package lesssons20;
+package lessons20;
 
 import jakarta.xml.bind.annotation.XmlAttribute;
 import lombok.AllArgsConstructor;
@@ -10,8 +10,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Position {
-    @XmlAttribute
-    private String position;
+
+    private String name;
     @XmlAttribute
     private BigDecimal salary;
 }
