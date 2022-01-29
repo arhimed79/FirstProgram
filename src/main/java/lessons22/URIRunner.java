@@ -5,6 +5,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -60,23 +61,23 @@ class URIRunner {
             XPath xPath = XPathFactory.newInstance().newXPath();
             NodeList nodeList = (NodeList) xPath.compile("//temperature").evaluate(xmlDocument, XPathConstants.NODESET);
 
+
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    System.out.println("Текущая температура в городе = "+city+ " = " + element.getAttribute("value"));
+                    System.out.println("Текущая температура в городе = " + city + " = " + element.getAttribute("value"));
                 }
             }
         } catch (ParserConfigurationException | XPathExpressionException | SAXException | IOException e) {
             e.printStackTrace();
         }
+
     }
 
     //   ObjectMapper objectMapper = new ObjectMapper();
     //  JsonNode temp = objectMapper.readValue(fileOutput, JsonNode.class);
     //   System.out.println(temp.get("temp"));
-
-
 
 
     private static String getCity(int nambeCity) {
@@ -104,11 +105,11 @@ class URIRunner {
         try {
             num = scanerData.nextInt();
         } catch (Exception e) {
-            System.out.println("Вы ввели невверные данныые, " + scanerData + " по умолчанию будет присвоено = 1");
-            return 1;
+            System.out.println("Вы ввели неверные данныые, " + scanerData );
+            return getNum();
         }
         if (num < 1 || num > 5) {
-            System.out.println("Вы ввели невверныые данныые, " + num + " по умолчанию будет присвоено = 1");
+            System.out.println("Вы ввели неверныые данныые, " + num + " по умолчанию будет присвоено = 1");
             return 1;
         }
         return num;
