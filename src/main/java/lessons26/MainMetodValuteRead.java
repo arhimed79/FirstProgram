@@ -44,7 +44,7 @@ public class MainMetodValuteRead {
                      System.out.print("Текущий курс 1 "+ finalText.toUpperCase() +" = " +value + " рублей\n \n"
                      + "Заново введите код валюты или нажмите Y для выхода\n");
                 },
-                  () -> System.out.println("Попробуйте еще раз")
+                  () -> System.out.println("Попробуйте еще раз или нажмите Y для выхода")
             );
         }
     }
