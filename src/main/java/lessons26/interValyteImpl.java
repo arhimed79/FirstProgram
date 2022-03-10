@@ -5,8 +5,6 @@ import com.jayway.jsonpath.JsonPath;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Component;
-
-
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -23,10 +21,10 @@ public class interValyteImpl implements InterValute {
     private Map<String, BigDecimal> mappingValutes = Collections.emptyMap();
     private Map<String, String> mappingValutesName = Collections.emptyMap();
 
-    @SneakyThrows
+
     @PostConstruct
     void init() {
-        final DocumentContext documentContext = JsonPath.parse(new URL("https://www.cbr-xml-daily.ru/daily_json.js"));
+        final DocumentContext documentContext = getDocumentContext();
         final List<Map<String, Object>> val = documentContext.read("$.Valute.*", List.class);
         mappingValutes = val.stream()
                 .map(it -> Pair.of(it.get("CharCode").toString(), new BigDecimal(it.get("Value").toString())))
@@ -42,7 +40,7 @@ public class interValyteImpl implements InterValute {
     @SneakyThrows
     @PostConstruct
     void init2() {
-        final DocumentContext documentContext2 = JsonPath.parse(new URL("https://www.cbr-xml-daily.ru/daily_json.js"));
+        final DocumentContext documentContext2 = getDocumentContext();
         final List<Map<String, String>> val2 = documentContext2.read("$.Valute.*", List.class);
         mappingValutesName = val2.stream()
                 .map(it -> Pair.of(it.get("CharCode"), it.get("Name")))
@@ -55,4 +53,9 @@ public class interValyteImpl implements InterValute {
         return Optional.ofNullable(mappingValutesName.get(name));
     }
 
+    @SneakyThrows
+    private DocumentContext getDocumentContext() {
+        final DocumentContext documentContext = JsonPath.parse(new URL("https://www.cbr-xml-daily.ru/daily_json.js"));
+        return documentContext;
+    }
 }
